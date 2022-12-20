@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/css/swiper.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/css/swiper.min.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <title>UI Tasarım</title>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="navbar-container container">
+            <input type="checkbox" name="" id="">
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <ul class="menu-items">
+                <li><a href="#">Anasayfa</a></li>
+                <li><a href="#">Hakkımızda</a></li>
+                <li><a href="#">Kategoriler</a></li>
+                <li><a href="#">Menü</a></li>
+                <li><a href="#">Hizmetler</a></li>
+                <li><a href="#">İletişim</a></li>
+            </ul>
+            <h1 class="logo">UI Slider</h1>
+        </div>
+    </nav>
+    <!-- about -->
+    <div class="about">
+        <a class="bg_links social twitter" href="https://www.twitter.com/hekzanot" target="_blank">
+        <span class="icon"></span>
+        </a>
+        <a class="bg_links social github" href="https://github.com/hekzanot" target="_blank">
+        <span class="icon"></span>
+        </a>
+        <a class="bg_links social linkedin" href="https://www.linkedin.com/in/mucahit-eren-ozcan/" target="_blank">
+        <span class="icon"></span>
+        </a>
+        <a class="bg_links logos"></a>
+    </div>
+ <!-- end about -->
+ 
+ <div class="swiper-container">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+    <!-- Slider -->
+    
+       <!-- Slide1 -->
+       <div class="swiper-slide" style="background-color: #BED2D1">
+          <div class="swiper-item" style="background-image: url(img/photo-three.jpg)">
+          </div>
+          <span class="number">01</span>
+          <div class="slide-text playText" style="background-color: #BED2D1">
+             <h1>Burası bir başlık alanı</h1>
+             <p>Burası bir açıklama alanı.</p>
+             <button class="btn">link</button>
+   
+          </div>
+       </div>
+       <!-- END Slide1 -->
+       <!-- Slide2 -->
+       <div class="swiper-slide" style="background-color: #5a2325">
+          <div class="swiper-item" style="background-image: url(img/photo-one.jpg)">
+          </div>
+          <span class="number">02</span>
+          <div class="slide-text" style="background-color: #5a2325">
+             <h1>Burası bir başlık alanı</h1>
+             <p>Burası bir açıklama alanı.</p>
+             <button class="btn">link</button>
+          </div>
+       </div>
+       <!-- END Slide2 -->
+       
+       <!-- Slide3 -->
+       <div class="swiper-slide" style="background-color: #ADB3BE">
+          <div class="swiper-item" style="background-image: url(img/photo-two.jpg)">
+          </div>
+          <span class="number">03</span>
+          <div class="slide-text" style="background-color: #ADB3BE">
+             <h1>Burası bir başlık alanı</h1>
+             <button class="btn">link</button>
+             
+          </div>
+       </div>
+       <!-- END Slide3 -->
+       
+       <!-- Slide4 -->
+       <div class="swiper-slide" style="background-color: #DACFD1">
+          <div class="swiper-item" style="background-image: url(img/photo-four.jpg)">
+          </div>
+          <span class="number">04</span>
+         
+       </div>
+       <!-- END Slide4 -->
+       <!-- Slide5 -->
+       <div class="swiper-slide" style="background-color: #D5AB92">
+          <div class="swiper-item" style="background-image: url(img/photo-five.jpg)">
+          </div>
+          <span class="number">05</span>
+         
+       </div>
+       <!-- END Slide5 -->
+       
+    </div>
+    <!-- pagination -->
+    <div class="swiper-pagination"></div>
+ 
+    <!-- navigation button -->
+    <div class="swiper-arrows">
+    <div class="swiper-button-prev"><span></span></div>
+    <div class="swiper-button-next"><span></span></div>
+    </div>
+ </div>
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.min.js"></script>
+ <script id="rendered-js">
+    // swiper
+    var mySwiper = new Swiper(".swiper-container", {
+      effect: "",
+      loop: false,
+      speed: 800,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev" },
+    
+      pagination: {
+        el: ".swiper-pagination",
+        type: "bullets",
+        clickable: "true" } });
+    
+    
+    
+    //transitions
+    var btnNext = document.querySelector(".swiper-button-next"),
+    btnPrev = document.querySelector(".swiper-button-prev"),
+    sliderText = document.querySelectorAll(".slide-text"),
+    sliderNumber = document.querySelectorAll(".swiper-slide .number");
+    
+    
+    
+    
+    btnNext.addEventListener("click", transitionSlideNext);
+    btnPrev.addEventListener("click", transitionSlidePrev);
+    
+    function transitionSlideNext() {
+      var slideActiveText = document.querySelector(".swiper-slide-active .slide-text"),
+      slidePrevText = document.querySelector(".swiper-slide-prev .slide-text");
+    
+      slidePrevText.classList.remove("playText");
+      slideActiveText.classList.add("playText");
+    }
+    
+    function transitionSlidePrev() {
+      var slideActiveText = document.querySelector(".swiper-slide-active .slide-text"),
+      slideNextText = document.querySelector(".swiper-slide-next .slide-text");
+    
+      slideNextText.classList.remove("playText");
+      slideActiveText.classList.add("playText");
+    }
+    </script>
+</body>
+</html>
