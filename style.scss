@@ -2,6 +2,15 @@ $color_1: #000;
 $color_2: #444;
 $color_3: #117964;
 
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,400i|IBM+Plex+Sans+Condensed:400,400i|IBM+Plex+Sans:100,100i,400,400i,700,700i|IBM+Plex+Serif:400,400i');
+
+body {
+   font-family: 'IBM Plex Mono', monospace;
+   font-family: 'IBM Plex Sans', sans-serif;
+   font-family: 'IBM Plex Serif', serif;
+   margin: 0;
+}
+
 /* * {
 	box-sizing: border-box;
 	padding: 0;
@@ -324,14 +333,7 @@ $color_3: #117964;
    }
 }
 
-@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,400i|IBM+Plex+Sans+Condensed:400,400i|IBM+Plex+Sans:100,100i,400,400i,700,700i|IBM+Plex+Serif:400,400i');
 
-body {
-   font-family: 'IBM Plex Mono', monospace;
-   font-family: 'IBM Plex Sans', sans-serif;
-   font-family: 'IBM Plex Serif', serif;
-   margin: 0;
-}
 
 /* swiper */
 
